@@ -1,0 +1,49 @@
+{
+    "predictions": [
+        {
+            "probability": 0.999992,
+            "tagId": "6a158f31-6090-48db-91db-7846b3a50068",
+            "tagName": "carryback",
+            "boundingBox": {
+                "left": 0.618677,
+                "top": 0.6863731,
+                "width": 0.19691789,
+                "height": 0.0499025
+            },
+            "area": 4025.014274344961,
+            "image_path": ".\\Section2_33.png",
+            "section_id": 1,
+            "timestamp": "2025-01-21T13:54:42.484661"
+        },
+        {
+            "probability": 0.99996793,
+            "tagId": "6a158f31-6090-48db-91db-7846b3a50068",
+            "tagName": "carryback",
+            "boundingBox": {
+                "left": 0.42488137,
+                "top": 0.511561,
+                "width": 0.0801954,
+                "height": 0.02660054
+            },
+            "area": 873.7754912833536,
+            "image_path": ".\\Section2_33.png",
+            "section_id": 1,
+            "timestamp": "2025-01-21T13:54:42.484661"
+        },
+        {
+            "probability": 0.99995387,
+            "tagId": "6a158f31-6090-48db-91db-7846b3a50068",
+            "tagName": "carryback",
+            "boundingBox": {
+                "left": 0.64584076,
+                "top": 0.32488295,
+                "width": 0.06893659,
+                "height": 0.044912815
+            },
+            "area": 1268.1774339689882,
+            "image_path": ".\\Section2_33.png",
+            "section_id": 1,
+            "timestamp": "2025-01-21T13:54:42.484661"
+        }
+    ]
+}

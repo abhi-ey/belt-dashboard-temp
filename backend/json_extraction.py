@@ -13,9 +13,9 @@ args = parser.parse_args()
 
 
 endpoint = "https://australiaeast.api.cognitive.microsoft.com/"
-prediction_key = "69c7cdcb3ea549d484ad20b632919823"
-project_id = "d7b27113-f02a-4f82-98b5-6ae4b14d494c"
-iteration_name = "Iteration2"
+prediction_key = "130zGy04dbVLoSP94SIZlbb6i59Q0qpdvk5g1AVFjtqRDkCjW3CxJQQJ99BAACL93NaXJ3w3AAAIACOGXcDJ"
+project_id = "a3deae39-d72a-4cab-abff-90e2d7a225ec"
+iteration_name = "Iteration1"
 
 threshold = args.threshold
 
