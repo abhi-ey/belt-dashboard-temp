@@ -151,6 +151,25 @@ function Sidebar({
                   </div>
                 </NavLink>
               </li>
+
+              {/* Reports */}
+              <li className={`pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-[linear-gradient(135deg,var(--tw-gradient-stops))] ${pathname.includes("reports") && "from-yellow-500/[0.12] dark:from-yellow-500/[0.24] to-yellow-500/[0.04]"}`}>
+                <NavLink
+                  end
+                  to="/reports" // Change this to the route of your Dashboard page
+                  className={`block text-gray-800 dark:text-gray-100 truncate transition duration-150 ${
+                    pathname.includes("reports") ? "" : "hover:text-gray-900 dark:hover:text-white"
+                  }`}
+                >
+                  <div className="flex items-center">
+                    <svg className={`shrink-0 fill-current ${pathname.includes('reports') ? 'text-yellow-500' : 'text-gray-400 dark:text-gray-500'}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <path d="M14.75 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM14.75 16a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM2.5 14.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM1.25 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" />
+                      <path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2ZM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" />
+                    </svg>
+                    <span className="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Reports</span>
+                  </div>
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
