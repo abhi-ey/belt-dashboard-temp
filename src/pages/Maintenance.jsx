@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import Sidebar from '../partials/Sidebar'; // Adjust the path to your Sidebar component
 import Header from '../partials/Header'; // Adjust the path to your Header component
+import CalendarEventForm from '../partials/CalendarEventForm';
 
 function Maintenance() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false); // Manage sidebar open state
   const [currentDate, setCurrentDate] = useState(new Date()); // Manage current displayed month/year
-
-  // Example events
-  const events = [
+  const [events, setEvents] = useState([
     { date: '2025-01-03', title: 'System Upgrade' },
     { date: '2025-01-10', title: 'Ironflow Conveyor Maintenance' },
     { date: '2025-01-15', title: 'Safety Inspection' },
     { date: '2025-01-20', title: 'Monthly Operations Meeting' },
     { date: '2025-01-25', title: 'RedEarth Conveyor Calibration' },
-  ];
+  ]);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Manage modal open state
 
   // Extract current year and month
   const year = currentDate.getFullYear();
@@ -42,6 +42,11 @@ function Maintenance() {
   // Handlers for navigation between months
   const handlePreviousMonth = () => setCurrentDate(new Date(year, month - 1, 1));
   const handleNextMonth = () => setCurrentDate(new Date(year, month + 1, 1));
+
+  // Add event to the events array
+  const addEvent = (newEvent) => {
+    setEvents((prevEvents) => [...prevEvents, newEvent]);
+  };
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
@@ -75,6 +80,13 @@ function Maintenance() {
               Next
             </button>
           </div>
+
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="text-sm text-[30px] text-slate-200 rounded mb-4 hover:bg-slate-600 w-[90px] h-[45px] self-end"
+          >
+            +
+          </button>
 
           {/* Day Labels */}
           <div className="grid grid-cols-7 text-center font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -159,6 +171,14 @@ function Maintenance() {
               )}
             </div>
           )}
+
+          {/* Calendar Event Form Modal */}
+          <CalendarEventForm
+            isOpen={isModalOpen}
+            toggleModal={setIsModalOpen}
+            selectedDate={selectedDate?.dateString || ''}
+            addEvent={addEvent}
+          />
         </main>
       </div>
     </div>
