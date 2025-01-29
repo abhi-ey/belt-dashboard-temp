@@ -60,14 +60,13 @@ function PredictiveAnalysis() {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-sm rounded-xl p-6">
       <ul className="text-gray-700 dark:text-gray-300 space-y-2">
-        <li><strong>Mean Squared Error:</strong> {mean_squared_error}</li>
         <li><strong>R-Squared Score:</strong> {r2_score}</li>
         <li><strong>Threshold:</strong> {threshold}</li>
       </ul>
       {exceed_threshold_belt_rotation !== null && exceed_threshold_belt_rotation !== undefined ? (
         <p className="mt-4">
           This section is due for maintenance in approximately{' '}
-          <strong className="text-red-600 dark:text-red-400">{Math.round(exceed_threshold_belt_rotation)} belt rotations</strong>.
+          <strong className="text-red-600 dark:text-red-400">{Math.round(exceed_threshold_belt_rotation)} weeks</strong>.
         </p>
       ) : (
         <p className="text-green-600 dark:text-green-400 mt-4">

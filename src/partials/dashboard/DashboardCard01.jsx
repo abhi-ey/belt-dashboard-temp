@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LineChart from '../../charts/LineChart01';
 import { chartAreaGradient } from '../../charts/ChartjsConfig';
 import EditMenu from '../../components/DropdownEditMenu';
+import axios from 'axios';
 
 // Import utilities
 import { tailwindConfig, hexToRGB } from '../../utils/Utils';
@@ -12,7 +13,7 @@ function DashboardCard01() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const location = "Sydney"; // Specify the location here
+  const location = "Perth"; // Specify the location here
   const apiKey = "848e83f565080d330f49c682c7c52251"; // Replace with your OpenWeatherMap API key
 
   useEffect(() => {

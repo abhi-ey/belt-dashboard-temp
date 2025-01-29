@@ -74,7 +74,7 @@ function LRGraph() {
     labels: graphData.belt_rotation,
     datasets: [
       {
-        label: 'Predicted Area Sum',
+        label: 'Predicted Cumulative Carryback Area over time',
         data: graphData.predicted_area_sum,
         borderColor: 'rgb(75, 192, 192)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -92,13 +92,13 @@ function LRGraph() {
       x: {
         title: {
           display: true,
-          text: 'Belt Rotation',
+          text: 'Time (Weeks)',
         },
       },
       y: {
         title: {
           display: true,
-          text: 'Area Sum',
+          text: 'Cumulative Carryback Area',
         },
       },
     },
@@ -126,21 +126,6 @@ function LRGraph() {
               enabled: true,
               position: 'end',
               backgroundColor: 'rgba(255, 99, 132, 0.8)',
-              color: '#fff',
-            },
-          },
-          beltRotationLine: {
-            type: 'line',
-            scaleID: 'x',
-            value: graphData.exceed_threshold_belt_rotation, // Vertical line at belt rotation
-            borderColor: 'rgb(54, 162, 235)', // Blue line
-            borderWidth: 2,
-            borderDash: [4, 4],
-            label: {
-              content: `Belt Rotation (${graphData.exceed_threshold_belt_rotation})`,
-              enabled: true,
-              position: 'end',
-              backgroundColor: 'rgba(54, 162, 235, 0.8)',
               color: '#fff',
             },
           },

@@ -12,6 +12,7 @@ import Analytics from './pages/Analytics.jsx';
 import MapPage from './pages/MapPage.jsx';
 import Maintenance from './pages/Maintenance.jsx';
 import Reports from './pages/Reports.jsx';
+import About from './pages/About.jsx';
 
 function App() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
         <Route path="/map" element={<MapPage />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </ContextProvider>
   );

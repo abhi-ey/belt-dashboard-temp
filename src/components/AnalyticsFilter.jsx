@@ -87,7 +87,7 @@ function AnalyticsFilter({ onFilterChange }) {
 
       {/* Legend */}
       <div className="mt-4 sm:mt-0">
-        <h3 className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Legend:</h3>
+        <h3 className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">Severity Legend:</h3>
         <ul className="space-y-1">
           <li className="flex items-center">
             <span className="w-4 h-4 bg-green-400 rounded-full mr-2"></span>
