@@ -77,11 +77,17 @@ Ensure you have the following installed:
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Switch to the backend directory, then start the backend server:
    ```bash
+   cd backend
    npm start
    ```
-4. Open the app in your browser at `http://localhost:3000`.
+4. Open another terminal and swith to the frontend directory, then start the frontend server:
+   ```bash
+   cd frontend
+   npm run dev
+   ```   
+5. Open the app in your browser at `http://localhost:3000`, or press 'o' + 'Enter'.
 
 ---
 
