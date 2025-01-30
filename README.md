@@ -1,4 +1,4 @@
-# Map Page Codebase README
+# Conveyor Belt Analytics Dashboard Codebase README
 
 ## Overview
 This codebase implements a React-based map visualization for conveyor belt monitoring in Rio Tinto's Pilbara region. It uses **MapLibre GL** for 3D map rendering, with integrated metadata and functionality for a user-friendly experience. The application is designed to assist maintenance engineers by visualizing belt data, statuses, and associated metadata.
